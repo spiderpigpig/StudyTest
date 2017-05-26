@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+<title>选择省份城市</title>
+</head>
+
+<script type="text/javascript" >
+init();
+function init(){
+	//创建XMLHttpRequest对象
+	var xhr=new XMLHttpRequest();
+	//初始化请求信息
+	xhr.open('POST','Init',true);
+	//发出请求
+	xhr.send();
+	//监听事件处理并响应结果
+	xhr.onreadystatechange=function(){
+		  
+		if(xhr.readyState==4&xhr.status==200){
+			provinceSelect(xhr.responseText);
+			var provinceName = eval(xhr.responseText)[0];
+
+			//初始化请求信息
+			xhr.open('GET','GetCity?provinceName='+provinceName,true);
+			//发出请求
+			xhr.send();
+			//监听事件处理并响应结果
+			xhr.onreadystatechange=function(){
+				  
+				if(xhr.readyState==4&xhr.status==200){
+					citySelect(xhr.responseText);
+						 
+				}
+			}
+		}
+	}
+}
+function choiceProvince(){
+	 var provinceName = document.getElementById("province").value;
+	//创建XMLHttpRequest对象
+	var xhr=new XMLHttpRequest();
+	//初始化请求信息
+	xhr.open('GET','GetCity?provinceName='+provinceName,true);
+	//发出请求
+	xhr.send();
+	//监听事件处理并响应结果
+	xhr.onreadystatechange=function(){
+		  
+		if(xhr.readyState==4&xhr.status==200){
+			citySelect(xhr.responseText);
+				 
+		}
+	}
+}
+
+function provinceSelect(ret)
+{
+	  var select=document.getElementById("province");
+	  // 将json字符串转成json对象
+	   ret=eval(ret);
+	 
+	  
+	   for(var i = 0; i < ret.length; i++){
+		   var option= document.createElement("option");
+			 select.appendChild(option);
+			 
+			 option.innerHTML=ret[i];
+	   }
+	   
+	  
+	
+	
+}
+function citySelect(ret)
+{
+	 var select=document.getElementById("city");
+	 // 将json字符串转成json对象
+	 ret=eval(ret);
+	 
+	
+	 select.innerHTML='';
+	  
+	 for(var i = 0; i < ret.length; i++){
+		var option= document.createElement("option");
+		select.appendChild(option);
+			 
+		option.innerHTML=ret[i];
+	 }
+	   
+	  
+	
+	
+}
+
+</script>
+<style>
+div{
+   width: 500px;
+   height: 300px;
+   margin:100px auto;
+}
+ select{
+	width: 150px;
+}
+</style>
+
+<body>
+
+<div>
+
+	省份：<select id="province" onchange="choiceProvince()"></select>
+	城市：<select id="city" ></select>
+ 
+</div>
+
+ 
+
+</body>
+</html>
+
