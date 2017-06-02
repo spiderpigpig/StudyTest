@@ -42,10 +42,10 @@ public class ShowNewsServlet extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		QingHaiService<News> service = new NewsServiceImpl<>();
 		List<News> list = service.findAll("WHERE NEWSID="+newsID);
-		//String callBack = request.getParameter("callBack");
-		String json = "getShowNews("+JSON.toJSONString(list.get(0))+")";
+		String callBack = request.getParameter("callBack");
+		String json = callBack+"("+JSON.toJSONString(list.get(0))+")";
 		pw.write(json);
-		pw.write("<script>window.location.href=\"http://127.0.0.1:8020/webDemo1/showNews.html\"; </script>");
+		//pw.write("<script>window.location.href=\"http://127.0.0.1:8020/webDemo1/showNews.html\"; </script>");
 		System.out.println(json);
 		
 		pw.flush();

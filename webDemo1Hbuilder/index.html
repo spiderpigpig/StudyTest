@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/index.js" ></script>
+		<title>青海高端盐湖科技有限公司</title>
+	</head>
+	<body>
+		<!--header区域-->
+		<div class="header">
+			<a href="#"><img class="logo" src="img/hd_logo.png" /></a>
+			<div class="tel">
+				<img style="float: left;width: 40px;" src="img/tel.png"/>
+				<div style="float: left;color:#999;">
+					咨询电话
+					<p>021-012345678</p>
+				</div>
+			</div>
+			<ul class="nev">
+				<li><a href="index.html">首页</a><span></span></li>
+				<li><a href="aboutCompany.html">关于我们</a><span></span></li>
+				<li><a href="news.html">新闻中心</a><span></span></li>
+				<li><a href="#">产品中心</a><span></span></li>
+				<li><a href="#">旗下企业</a><span></span></li>
+				<li><a href="onlineTalk.html">在线留言</a><span></span></li>
+				<li><a href="contactUs.html">联系我们</a><span></span></li>
+			</ul>
+		</div>
+		<!--/header-->
+		
+		<!--banner-->
+		<div class="banner">
+			<a href="#"> <img id="banner" class="img" src="img/banner1.jpg"/> </a>
+			<div onclick="banner_before()" onmouseover="bannerPause()" onmouseout="bannerContinue()"> <a href="#" class="btn btn_l"><</a> </div>
+			<div onclick="banner_next()" onmouseover="bannerPause()" onmouseout="bannerContinue()"> <a href="#" class="btn btn_r">></a> </div>
+			<ul class="btn_num">
+				<a href="#" id="bannerN1" onmouseover="bannerNum1();bannerPause()" onmouseout="bannerContinue()" style="background-color: #00408f;">1</a>
+				<a href="#" id="bannerN2" onmouseover="bannerNum2();bannerPause()" onmouseout="bannerContinue()">2</a>
+				<a href="#" id="bannerN3" onmouseover="bannerNum3();bannerPause()" onmouseout="bannerContinue()">3</a>
+			</ul>
+		</div>
+		<!--/banner-->
+		
+		<!--about-->
+		<div class="about">
+			<div class="box left" id="aboutMedal"  onmouseover="aboutMedalOver()" onmouseout="aboutMedalOut()">
+				<a href="aboutCompany.html">
+					<div class="img"><img id="imgMedal" src="img/iconfont-gongsizizhiGray.png"/></div>
+					<div class="text">
+						<h2 id="aboutMedalH">公司简介</h2>
+						<p>青海高端盐湖是一个大型钾盐生产企业，位于柴达木盆地察尔汗盐湖的东台，南依昆仑，北临祁连。湖区面积300多平方公里...</p>
+					</div>
+				</a>
+			</div>
+			<div class="box right" id="aboutBooks" onmouseover="aboutBooksOver()" onmouseout="aboutBooksOut()">
+				<a href="#">
+					<div class="img"><img id="imgBooks" src="img/iconfont-iconfontzhishikuGray.png"/></div>
+					<div class="text">
+						<h2 id="aboutBooksH">产品知识</h2>
+						<p>根据中国农业科学院土壤肥料研究所，加拿大钾磷研究所（PPI/PPIC）的联合研究表明：中国土壤中严重缺少钾元素...</p>
+					</div>
+				</a>
+			</div>
+		</div>
+		<!--/about-->
+		
+		<!--盐湖风光-->
+		<div class="picture">
+			<div class="title">
+				<h2>盐湖风光</h2>
+				<p>SALINE LAKE SCENERY</p>
+			</div>
+			<!--产品轮播区域-->
+		    <div class="pic_body">
+		    	<img class="left" src="img/mfrl.gif"/>
+		    	<div>
+			    	<img src="img/1448678784.jpg"/>
+			    	<img src="img/1448681479.jpg"/>
+			    	<img src="img/1448681883.jpg"/>
+			    	<img src="img/1448682693.jpg"/>
+		    	</div>
+		    	<img class="right" src="img/mfrr.gif"/>
+		    </div>
+		    <a href="#" style="text-decoration: none;">
+			    <div class="more">
+			    	查看更多<b>></b>
+			    </div>
+		    </a>
+		</div>	
+		<!--/盐湖风光-->
+		<!--新闻中心-->
+		<div class="news">
+			<div class="title">
+				<h2>新闻中心</h2>
+				<p>NEWS</p>
+			</div>
+			<div class="body">
+				<div class="box1">
+					<div>
+						<p>CONPANY</p>
+						<p>CONFIDENCE</p>
+						<h3>新闻    &  动态</h3>
+						<div class="sbox up" id="newsNews" onclick="newBoxUp()" onmouseover="newBoxWidthAdd(id)" onmouseout="newBoxWidthDec(id)">
+							<h3>公司新闻</h3>
+							<p>NEWS</p>
+						</div>
+						<div class="sbox down" id="newsDynamic" onclick="newBoxDown()" onmouseover="newBoxWidthAdd(id)" onmouseout="newBoxWidthDec(id)">
+							<h3>行业动态</h3>
+							<p>DYNAMIC</p>
+						</div>
+					</div>
+				</div>
+				<div class="box2">
+					<div class="sbox" id="sbox">
+						<h5>青海高端盐湖科技有限公司董事长视察工地及水源地</h5>
+						<div>青海高端盐湖科技有限公司董事长视察工地及水源地，了解生产情况就安全生产现场作出重要指示。会...<a href="#">[详情]</a></div>
+						<ul>
+							<li><a href="#"><h5>· 青海高端盐湖科技有限公司董事长视察工地及水源...<span>03-29</span></h5></a></li>
+							<li><a href="#"><h5>· 热烈庆祝腾飞葡萄专业合作社施用“辉田”牌硫酸...<span>11-28</span></h5></a></li>
+							<li><a href="#"><h5>· 西南地区丰收的季节<span>11-28</span></h5></a></li>	
+						</ul>
+						<a href="#" style="text-decoration: none;">
+						    <div class="more moreU">
+						    	查看更多&nbsp;&nbsp;&nbsp;&nbsp;>
+						    </div>
+					    </a>
+				    
+						<h5>氨基酸多肽高塔复肥在东莞大众批量下线</h5>
+						<div>据介绍，该肥料的显著的特点是：不但能节肥20%、增产15%左右，而且能改善作物品质。氨基酸多肽...<a href="#">[详情]</a></div>
+						<ul>
+							<li><a href="#"><h5>· 青海高端盐湖科技有限公司董事长视察工地及水源...<span>03-29</span></h5></a></li>
+							<li><a href="#"><h5>· 热烈庆祝腾飞葡萄专业合作社施用“辉田”牌硫酸...<span>11-28</span></h5></a></li>
+							<li><a href="#"><h5>· 西南地区丰收的季节<span>11-28</span></h5></a></li>	
+						</ul>
+						<a href="#" style="text-decoration: none;">
+						    <div class="more moreD">
+						    	查看更多&nbsp;&nbsp;&nbsp;&nbsp;>
+						    </div>
+					    </a>
+				    </div>
+				</div>
+				<div class="box3">
+					<img src="img/shipin.jpg"/>
+					<h4>公司宣传片</h4>
+					<p>TRAILER</p>
+				</div>
+			</div>
+		</div>
+		<!--/新闻中心-->
+		<!--bottom-->
+		<div class="bottomSkyblue">
+			<div>
+				<img src="img/ft_logo.png" style="float: left;"/>
+				<div class="addr">
+					<h5>青海高端盐湖科技有限公司</h5>
+					<p>公司地址：青海省格尔木市柴达木西路14号</p>
+					<p>Email：qhgdyh@126.com</p>
+					<p>传真：0979-8467858 邮编：816000</p>
+					<h3>0979-8463599</h3>
+				</div>
+				<img src="img/erweima.png"/ style="float: right;margin-top:23px ;">
+			</div>
+		</div>
+		<div class="bottomblue">
+			<div>
+				<div class="friend" onmouseout="friendUlMoveOut()" onmouseover="friendUlMoveOver()">
+					<ul class="friendUl" id="friendUl">
+					<a href="http://www.dadimeishu.cn/"><li>济南大地美术</li></a>
+					<a href="http://www.hbq9.cn/"><li>白鹤泉酒厂</li></a>
+					<a href="http://www.qingnian8.com/"><li>青年帮创意工坊</li></a>
+				</ul>
+					友情链接&emsp;&emsp;&emsp;^
+				</div>
+				<p>青海高端盐湖科技有限公司 &nbsp;  青ICP备05001178号</p>
+			</div>
+		</div>
+		<!--/bottom-->
+	</body>
+</html>

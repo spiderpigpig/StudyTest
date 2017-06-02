@@ -1,0 +1,283 @@
+a,address,b,big,blockquote,body,center,cite,code,dd,del,div,dl,dt,em,fieldset,font,form,h1,h2,h3,h4,h5,h6,html,i,iframe,img,ins,label,legend,li,ol,p,pre,small,span,strong,u,ul,var{
+	margin:0;padding:0; font-family:"微软雅黑","黑体"; color:#333333;
+}
+.header{
+	position: relative;width: 1100px;height: 100px;margin: 0 auto;
+}
+.header .logo, .header .tel , .header .nev{
+	position: absolute;
+}
+.header a .logo{
+	top: 16px;float: left;
+}
+.header .tel{
+	right: 100px;top: 16px;float: left;color:#999;font-size: 12px;
+}
+
+.header .tel p{
+	font-size:22px; font-weight:900; color:#00b3e1;
+}
+.header .nev{
+	top: 60px;left:350px ; float: left;
+}
+
+.header .nev li{
+	float: left;color:#333;padding:0 20px;display: block;font-size: 14px;
+}
+.header .nev li a{
+	text-decoration: none;
+}
+.header .nev li a:hover{
+	color:#00b3e1
+}
+/*.header .nev li span{
+   	width: 80px;background-color: blue;height: 1px;border: 1px solid black;display: block;position: absolute;margin-top: 20px;padding-right: 10px;
+}
+.header .nev li span{ height:3px; width:0; display:block; background:#00b3e1; position:absolute; bottom:0;left:50%; transition:0.3s;}
+.header .nev li:hover span{width:100%;left:0}*/
+.banner{
+	width:100%; height:500px; position:relative; overflow:hidden; min-width:1100px;
+}
+.banner .img{
+	width: 100%;height:100%; position: absolute;
+}
+.banner .btn{ 
+	font-size:100px;position:absolute;font-family:"宋体"; color:white; text-decoration: none;margin: 200px 0;
+}
+
+.banner .btn_l{
+	left:100px;transition: 0.2s;opacity:0;
+}
+.banner:hover .btn_l{
+	left: 30px;opacity:1;
+}
+.banner .btn_r{
+	right:100px;transition: 0.2s;opacity:0;
+}
+.banner:hover .btn_r{
+	right: 30px;opacity:1;
+}
+.btn_num{
+	position: absolute;bottom: 40px;left: 610px;
+}
+.btn_num a{
+	float: left;width: 25px;height: 25px; list-style: none; text-align: center; background-color: #aaaaaa;color:white;border-radius:50%;margin:0 10px;text-decoration: none;display: table-cell;vertical-align: middle;
+}
+.about{
+	width: 1100px;height: 185px;position: absolute; top: 680px;
+}
+.about .box{
+	width: 500px;border:1px solid #bfbfbf;
+	transition:0.2s;
+}
+.about .box:hover{
+	border:1px solid #00408f;
+	-webkit-transform: translate(0,-10px);
+	-webkit-box-shadow:1px 3px 15px;
+}
+.about .box a{
+	text-decoration: none;
+	
+}
+.about .left{
+	float: left;margin-left: 125px;
+}
+.about .right{
+	float: right;margin-right: -125px;
+}
+
+.about .box .img{
+	float: left;margin: 50px 40px;
+}
+.about .text{
+	margin: 40px 50px;
+}
+.about .text h2{
+	font-size: 20px;
+}
+.about .text p{
+	font-size: 14px;color: #AAAAAA;
+}
+
+.picture{
+	width: 100%;height: 580px;background-color: #f2f4f6;position: absolute; top: 930px;
+}
+.picture .title{
+	width: 1110px;height: 60px; background-image: url(../img/title_bg.png);text-align: center;background-repeat: no-repeat;background-position: 0% 100%; margin: 40px 120px;
+}
+.picture .title h2{
+	font-size:20px ;font-weight: 100;
+}
+.picture .title p{
+	font-size: 10px;color: #BFBFBF;
+}
+.pic_body .pic_body{
+	width: 1300px;
+}
+.picture .pic_body div{
+	padding:0 133px;width: 1300px;
+}
+.picture .pic_body .left{
+	top: 260px;left: 90px;position: absolute;width: 28px;
+}
+.picture .pic_body .right{
+	top: 260px;right: 90px;position: absolute;width: 28px;
+}
+.picture .more{
+	border:1px solid black;width: 250px;height: 50px;top:50px;left:550px ;position: relative; text-align: center;display: table-cell;vertical-align: middle;font-size: 8px;transition: 0.3s;
+}
+.picture .more:hover{
+	color: white;background-color: dodgerblue;border: 1px solid dodgerblue;
+}
+.picture .more b{
+	font-family: "宋体";position: relative;left: 50px;transition: 0.3s
+}
+.picture .more:hover b{
+	left: 70px;color: white;
+}
+.news{
+	width: 100%;height: 500px;position: relative;top:920px;
+}
+.news .title{
+	width: 1110px;height: 60px; background-image: url(../img/title_bg.png);text-align: center;background-repeat: no-repeat;background-position: 0% 100%; margin: 40px 120px;
+}
+.news .title h2{
+	font-size:20px ;font-weight: 100;
+}
+.news .title p{
+	font-size: 10px;color: #BFBFBF;
+}
+.news .body{
+	width: 1100px;height: 340px;padding: 0 150px;
+}
+.news .body .box1{
+	width: 17%;height: 100%;float: left; background-color: #3f434c;border: 1px solid #3f434c;;
+}
+.news .body .box1 div{
+	margin: 20px;
+}
+.news .body .box1 p{
+	color: #F2F4F6;font-size: 22px;font-family: "bookman old style";
+}
+.news .body .box1 h3{
+	color: white;margin:10px 0;
+}
+.news .body .box1 .sbox{
+	background-image: url(../img/iconfont-xinwen.png);background-repeat: no-repeat;background-size: 35px 35px ;background-position: 20px 28px;margin: 0px;  width: 155px;height: 90px;
+	
+}
+.news .body .box1 .up{
+	background-color: #00b3e1;transition: 0.3s;cursor:pointer;width: 168px;
+}
+/*.news .body .box1 .up:hover{
+	width: 168px;
+}*/
+.news .body .box1 .down{
+	background-color: #00408f;transition: 0.3s;cursor:pointer
+}
+/*.news .body .box1 .down:hover{
+	width: 168px;
+}*/
+.news .body .box1 .sbox h3{
+	margin-left:60px ;padding-top: 25px;
+}
+.news .body .box1 .sbox p{
+	margin-left:60px ;font-size: 16px;color: #F2F4F6;position: relative;top: -10px;
+}
+.news .body .box2{
+	width: 40%;height: 100%;float: left; border: 1px solid #BFBFBF;overflow: hidden;
+}
+.news .body .box2 .sbox{
+	border-left: 2px solid #00b3e1;
+}
+.news .body .box2 .sbox >h5{
+	margin: 30px 20px;color:#00b3e1 ;
+}
+.news .body .box2 .sbox  div{
+	margin-left:20px ;margin-right:10px ; height: 20px;text-indent:2em;font-size: 12px;
+}
+.news .body .box2 .sbox div>a{
+	color: #00b3e1 ;text-decoration: none;
+}
+.news .body .box2 .sbox ul{
+	margin: 20px;list-style:none;
+}
+.news .body .box2 .sbox a{
+	text-decoration: none;
+}
+.news .body .box2 .sbox ul h5{
+	display: inline;line-height: 50px;transition: 0.3s;
+}
+.news .body .box2 .sbox ul h5:hover{
+	color: #00b3e1;
+}
+.news .body .box2 .sbox span{
+	color: #BFBFBF;float: right;
+}
+.news .body .box2 .sbox .more{
+	border:1px solid black;width: 120px;left:300px ; height: 30px;position: relative; text-align: center;display: table-cell;vertical-align: middle;font-size: 8px;transition: 0.3s;
+}
+.news .body .box2 .sbox .moreU:hover{
+	color: white;background-color: #00b3e1;border: 1px solid #00b3e1;
+}
+.news .body .box2 .sbox .moreD:hover{
+	color: white;background-color: #00408f;border: 1px solid #00408f;
+}
+.news .body .box3{
+	width: 36%;height: 100%;float: left;margin: 0 25px; border: 1px solid #BFBFBF;text-align: center;
+}
+.news .body .box3 img{
+	width: 100%;
+}
+.news .body .box3 h4{
+	position: relative;top: 15px;
+}
+.news .body .box3 p{
+	font-size: 10px;color: #BFBFBF;position: relative;top: 15px;
+}
+.bottomSkyblue{
+	width: 100%;height: 200px;background-color: #00b3e1;position: relative;top:950px;
+}
+.bottomSkyblue > div{
+	width: 920px;height: 150px; left: 220px;top: 25px;position: relative;
+}
+.bottomSkyblue > div .addr{
+	float: left; margin: 20px 40px;background-image: url(../img/iconfont-icon.png);background-repeat: no-repeat;background-position-y: 100px;
+}
+.bottomSkyblue > div .addr h5{
+	color: white;padding-bottom: 20px;
+}
+.bottomSkyblue > div .addr p{
+	color: white;line-height: 20px;font-size: 12px;
+}
+.bottomSkyblue > div .addr h3{
+	color: white;padding-left: 30px;
+}
+.bottomSkyblue > div .addr{
+	
+}
+.bottomblue{
+	width: 100%;height: 35px;background-color: #00408f;position: relative;top:950px;font-size: 12px;
+}
+.bottomblue>div{
+	padding: 10px 220px;width: 950px;
+}
+.bottomblue>div .friend{
+	width: 100px;height: 20px; color: white;border: 1px solid white;cursor:pointer;display:inline;padding-top: 2px;padding: 2px 10px;
+}
+.bottomblue>div .friendUl{
+	list-style: none;margin-top: -63px; position: absolute;z-index: -1;padding-bottom: 20px;
+}
+
+.bottomblue>div .friendUl a{
+	text-decoration: none;
+}
+.bottomblue>div .friendUl li{
+	background-color: white;padding: 2px 19px 2px 12px;transition: 0.3s;
+}
+.bottomblue>div .friendUl li:hover{
+	background-color: #eeeeee;color: #00b3e1;
+}
+.bottomblue>div p{
+	color: white;float: right; display:inline;
+}

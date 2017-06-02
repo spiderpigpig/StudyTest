@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<!--<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+		<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />-->
+
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/other.css" />
+		<script type="text/javascript" src="js/index.js" ></script>
+		<title>关于我们 - 青海高端盐湖科技有限公司</title>
+	</head>
+	<body>
+		<!--header区域-->
+		<div class="header">
+			<a href="#"><img class="logo" src="img/hd_logo.png" /></a>
+			<div class="tel">
+				<img style="float: left;width: 40px;" src="img/tel.png"/>
+				<div style="float: left;color:#999;">
+					咨询电话
+					<p>021-012345678</p>
+				</div>
+			</div>
+			<ul class="nev">
+				<li><a href="index.html">首页</a><span></span></li>
+				<li><a href="aboutCompany.html">关于我们</a><span></span></li>
+				<li><a href="news.html">新闻中心</a><span></span></li>
+				<li><a href="#">产品中心</a><span></span></li>
+				<li><a href="#">旗下企业</a><span></span></li>
+				<li><a href="onlineTalk.html">在线留言</a><span></span></li>
+				<li><a href="contactUs.html">联系我们</a><span></span></li>
+			</ul>
+		</div>
+		
+		<!--/header-->
+		
+		<!--头部图片-->
+		
+		<img src="img/ny_banner_us.jpg" width="100%" height="280px" />
+		<div class="middleBody">
+			<div class="leftCompany">
+				<img src="img/1448807246.png" />
+				
+				<div class="aside_box">
+		        	<div class="title">联系我们</div>
+		            <div class="con">
+		            	<div class="tel">了解更多详细信息，请致电<span>0979-8463599</span></div>
+		                <div class="liuyan">或给我们留言<br/><a href="onlineTalk.html" >在线留言</a></div>
+		            </div>
+		       </div>
+			</div>
+			<div class="rightText">
+				<div class="title">
+		        	<h1 class="float_l">联系我们</h1>
+		            <div class="link float_r">
+		           		<a href="./">首页</a>&nbsp;&gt;&nbsp;<a href="#">联系我们</a>            
+		            </div>
+				</div>   
+				<div style="width:100%;height:550px;border:#ccc solid 1px;" id="dituContent"></div>
+				<h2 style="line-height: 100px;color: #00b3e1;">青海高端盐湖科技有限公司-【专业生产硫酸钾镁肥】 公司首页</h2>
+				<p>地址： 青海省格尔木市柴达木西路14号</p>
+				<p>邮编： 816099</p>
+				<p>电话： 0979-8464866</p>
+				<p>传真： 0979-8467858</p>
+				<p>Email：qhgdyh@126.com</p>
+			</div>
+		</div>
+		
+		<!--/头部图片-->
+		
+		<!--bottom-->
+		<div style=" height: 500px;position:absolute;top: 380px;z-index: -1;">
+		<div class="bottomSkyblue">
+			<div>
+				<img src="img/ft_logo.png" style="float: left;"/>
+				<div class="addr">
+					<h5>青海高端盐湖科技有限公司</h5>
+					<p>公司地址：青海省格尔木市柴达木西路14号</p>
+					<p>Email：qhgdyh@126.com</p>
+					<p>传真：0979-8467858 邮编：816000</p>
+					<h3>0979-8463599</h3>
+				</div>
+				<img src="img/erweima.png"/ style="float: right;margin-top:23px ;">
+			</div>
+		</div>
+		<div class="bottomblue">
+			<div>
+				<div class="friend" onmouseout="friendUlMoveOut()" onmouseover="friendUlMoveOver()">
+					<ul class="friendUl" id="friendUl">
+						<a href="http://www.dadimeishu.cn/"><li>济南大地美术</li></a>
+						<a href="http://www.hbq9.cn/"><li>白鹤泉酒厂</li></a>
+						<a href="http://www.qingnian8.com/"><li>青年帮创意工坊</li></a>
+					</ul>
+					友情链接&emsp;&emsp;&emsp;^
+				</div>
+				<p>青海高端盐湖科技有限公司 &nbsp;  青ICP备05001178号</p>
+			</div>
+		</div>
+		</div>
+		<!--/bottom-->
+	</body>
+	<style type="text/css">
+	    html,body{margin:0;padding:0;}
+	    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+	    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+	<script type="text/javascript">
+    	//创建和初始化地图函数：
+	    function initMap(){
+	        createMap();//创建地图
+	        setMapEvent();//设置地图事件
+	        addMapControl();//向地图添加控件
+	    }
+	    
+	    //创建地图函数：
+	    function createMap(){
+	        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+	        var point = new BMap.Point(116.395645,39.929986);//定义一个中心点坐标
+	        map.centerAndZoom(point,12);//设定地图的中心点和坐标并将地图显示在地图容器中
+	        window.map = map;//将map变量存储在全局
+	    }
+	    
+	    //地图事件设置函数：
+	    function setMapEvent(){
+	        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+	        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+	        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+	        map.enableKeyboard();//启用键盘上下左右键移动地图
+	    }
+	    
+	    //地图控件添加函数：
+	    function addMapControl(){
+	        //向地图中添加缩放控件
+		var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+		map.addControl(ctrl_nav);
+	        //向地图中添加缩略图控件
+		var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+		map.addControl(ctrl_ove);
+	        //向地图中添加比例尺控件
+		var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+		map.addControl(ctrl_sca);
+	    }
+	    
+	    
+	    initMap();//创建和初始化地图
+	</script>
+</html>
