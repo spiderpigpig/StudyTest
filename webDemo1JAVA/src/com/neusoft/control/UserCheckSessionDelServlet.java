@@ -1,29 +1,24 @@
 package com.neusoft.control;
 
 import java.io.IOException;
-import java.util.List;
-
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.neusoft.Service.QingHaiService;
-import com.neusoft.Service.Impl.UserServiceImpl;
-import com.neusoft.bean.User;
+import javax.servlet.http.HttpSession;
 
 /**
- * Servlet implementation class TestServlet1
+ * Servlet implementation class UserCheckSessionDelServlet
  */
-@WebServlet("/TestServlet1")
-public class TestServlet1 extends HttpServlet {
+@WebServlet("/UserCheckSessionDelServlet")
+public class UserCheckSessionDelServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public TestServlet1() {
+    public UserCheckSessionDelServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,10 +29,9 @@ public class TestServlet1 extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		QingHaiService service = new UserServiceImpl<>();
-		List<User> list = service.findAll("");
-		request.setAttribute("listUser",list);
-		request.getRequestDispatcher("Test.jsp").forward(request, response);
+		HttpSession session = request.getSession();
+		session.setAttribute("user", null);
+		response.sendRedirect("http://127.0.0.1:8020/webDemo1/login.html");
 	}
 
 	/**

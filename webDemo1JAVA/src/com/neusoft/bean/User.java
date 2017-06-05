@@ -38,6 +38,11 @@ public class User {
 	public User() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "User [userID=" + userID + ", username=" + username + ", password=" + password + ", status=" + status
+				+ "]";
+	}
 	
 	
 }

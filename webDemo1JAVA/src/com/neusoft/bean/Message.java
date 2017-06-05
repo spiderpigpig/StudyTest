@@ -1,5 +1,6 @@
 package com.neusoft.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Message {
@@ -10,6 +11,11 @@ public class Message {
 	private String email;
 	private String address;
 	private String message;
+	private String messageDateStr;
+	
+	public String getMessageDateStr(){
+		return messageDateStr;
+	}
 	
 	public Integer getMessageid() {
 		return messageid;
@@ -22,6 +28,7 @@ public class Message {
 	}
 	public void setMessageDate(Date messageDate) {
 		this.messageDate = messageDate;
+		this.messageDateStr =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(messageDate);
 	}
 	public String getUsername() {
 		return username;

@@ -35,6 +35,7 @@ public class MessageDeleteServlet extends HttpServlet {
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
 		response.setContentType("text/html;charset=UTF-8");
 		String messageID = request.getParameter("messageID");
+		System.out.println(messageID);
 		QingHaiService service = new MessageServiceImpl();
 		String where = "MESSAGEID="+messageID;
 		if(service.delete(where)>0){

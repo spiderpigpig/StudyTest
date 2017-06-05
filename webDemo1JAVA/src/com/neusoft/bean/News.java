@@ -1,5 +1,6 @@
 package com.neusoft.bean;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class News {
@@ -7,6 +8,10 @@ public class News {
 	private Date newsDate;
 	private String title;
 	private String newsContent;
+	private String newsDateStr;
+	public String getNewsDateStr(){
+		return newsDateStr;
+	}
 	public Integer getNewsID() {
 		return newsID;
 	}
@@ -18,6 +23,7 @@ public class News {
 	}
 	public void setNewsDate(Date newsDate) {
 		this.newsDate = newsDate;
+		this.newsDateStr=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(newsDate);
 	}
 	public String getTitle() {
 		return title;

@@ -9,6 +9,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import javax.websocket.Session;
 
 import com.neusoft.Service.Impl.UserServiceImpl;
 import com.neusoft.bean.User;
@@ -43,10 +45,10 @@ public class UserLogin extends HttpServlet {
 			if(list.size()!=0){
 				System.out.println(username+"µÇÂ¼³É¹¦");
 				User user = list.get(0);
-				request.setAttribute("user", user);
-				request.getAttribute("user");
-				request.getRequestDispatcher("manage.jsp").forward(request, response);
-				//response.sendRedirect("http://127.0.0.1:8020/webDemo1/manage.html");
+				HttpSession session=request.getSession();
+				session.setAttribute("user", user);
+				//request.getRequestDispatcher("manage.jsp").forward(request, response);
+				response.sendRedirect("manage.jsp");
 			}else{
 				System.out.println("µÇÂ¼Ê§°Ü");
 				PrintWriter pw = response.getWriter();

@@ -10,10 +10,9 @@ function init() {
 }
 
 function getNews(ret) {
-	
 	var ul=document.getElementById("news_list");
 	// 将json字符串转成json对象
-	
+	var str =JSON.stringify(ret);
 	//ret = eval(ret);
 	for(var i = 0; i < ret.length; i++) {
 		
@@ -21,7 +20,13 @@ function getNews(ret) {
 		ul.appendChild(li);
 		
 		var a = document.createElement("a");
-		a.href="showNews.html?newsID="+ret[i].newsID;
+		a.href="showNews.html?listID="+i;
+		//a.href="showNews.html";
+//		a.onclick=function(){
+//		  alert(ret[i]);
+//		}
+		
+		sessionStorage.news=str;
 		li.appendChild(a);
 		
 		var div= document.createElement("div");
