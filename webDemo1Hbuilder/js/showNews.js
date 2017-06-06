@@ -31,8 +31,10 @@ function getShowNews(ret) {
 
 function getShowNews2() {
 	
+//	var str = sessionStorage.newss;
+//	var ret = JSON.parse(str);
+//	alert(ret.title);
 	var str = sessionStorage.news;
-	//alert(str);
 	var retList = JSON.parse(str);
 	var ret = retList[listID];
 	//alert(ret.title);

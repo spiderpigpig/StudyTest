@@ -8,7 +8,11 @@ function init() {
 	_html.appendChild(_script);
 
 }
-
+//function _onclick(a){
+//	//alert(a.title);
+//	var str1 =JSON.stringify(a);
+//	sessionStorage.newss=str1;
+//}
 function getNews(ret) {
 	var ul=document.getElementById("news_list");
 	// 将json字符串转成json对象
@@ -21,10 +25,9 @@ function getNews(ret) {
 		
 		var a = document.createElement("a");
 		a.href="showNews.html?listID="+i;
-		//a.href="showNews.html";
-//		a.onclick=function(){
-//		  alert(ret[i]);
-//		}
+
+		var strNews=JSON.stringify(ret[i]);
+		//a.setAttribute("onclick","_onclick("+strNews+")");
 		
 		sessionStorage.news=str;
 		li.appendChild(a);
