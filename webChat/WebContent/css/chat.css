@@ -1,0 +1,22 @@
+
+.outside{
+	border: 1px solid black; 
+}
+.talkContent{
+	margin: 10px; 
+}
+li{
+	padding-bottom: 15px;
+}
+span{
+	font-size: 4px;
+}
+.form{
+	margin: 10px ;border: 1px solid black; position: fixed;left: 30%;right: 30%;bottom: 0;min-width: 250px;background-color: white;
+}
+iframe{
+	margin: 0 auto;min-width: 400px;
+}
+.outdiv{
+	text-align: center;
+}
