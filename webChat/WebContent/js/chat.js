@@ -1,6 +1,5 @@
-
 $(function() {
-	
+	var scroll = 0;
 	timer();
 	window.setInterval(timer,1000);
 	
@@ -9,8 +8,10 @@ $(function() {
 		$.ajax({url:"AjaxServlet",success:function(result){
 			var result = eval(result);
 			for (var index = 0; index < result.length; index++) {
-				//alert();
 				var date = new Date(result[index].talkDate);
+				if(new Date().getTime()-date.getTime()<=2000){
+					scroll=0;
+				}
 				var month = date.getMonth()+1;
 				var day = date.getDate();
 				var hour = date.getHours();
@@ -31,7 +32,11 @@ $(function() {
 				}else{
 					$(".talkContent").append($("<li><span>"+date+"</span><br/><b>"+result[index].username+"</b> : "+result[index].talkContent+"</li>"));
 				}
+			}
+			
+			if(scroll==0){
 				$("body").scrollTop(9999);
+				scroll = 1;
 			}
 		}});
 		

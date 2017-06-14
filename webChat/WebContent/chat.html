@@ -3,14 +3,22 @@
 	<link rel="stylesheet" href="css/chat.css" />
 	<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
 	<script type="text/javascript">
-		function mySubmit() {
+		//onclick="return mySubmit()"
+		/* function mySubmit() {
 			if($("input[name='content']").val().trim()==""){
 				alert("内容不能为空");
 				return false;
 			}
-			
-			
-		}
+		} */
+		
+		$(function(){
+			$("#submit").click(function(event){
+				if($("input[name='content']").val().trim()==""){
+					alert("内容不能为空");
+					event.preventDefault();
+				}
+			});
+		});
 	</script>
 	<head>
 		<meta charset="UTF-8">
@@ -25,7 +33,7 @@
 		<form class="form" action="SubmitServlet" method="post">
 			姓名：<input type="text" name="username"/><br />
 			内容：<input type="text" name="content"/><br />
-			<input id="submit" type="submit" onclick="return mySubmit()" value="发送"/>
+			<input id="submit" type="submit"  value="发送"/>
 		</form>
 		</div>
 		

@@ -36,6 +36,7 @@ public class AjaxServlet extends HttpServlet {
 		response.setContentType("text/html;charset=UTF-8");
 		ChatDaoImpl dao = new ChatDaoImpl();
 		String json = JSON.toJSONString(dao.findAll());
+		//json = request.getParameter("jsoncallback")+"("+json+")";
 		System.out.println(json);
 		PrintWriter pw = response.getWriter();
 		pw.write(json);
